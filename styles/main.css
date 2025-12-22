@@ -58,13 +58,18 @@ body {
 /* Título centrado y grande */
 .centered-title h1 {
   font-family: var(--font-display);
-  font-size: clamp(42px, 8vw, 72px);
+  font-size: clamp(32px, 6vw, 50px); /* más grande que antes */ 
+  line-height: 0.9; /* más bajo de altura */ 
+  letter-spacing: 4px; /* estirado entre letras */ 
+  transform: scaleX(1.2); /* estirado horizontal */ 
   margin: 0;
-  background: var(--primary);
+  background: #e6faff;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-align: center;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6), /* halo blanco */ 0 0 12px rgba(184, 75, 255, 0.25), /* magenta tenue */ 0 0 18px rgba(255, 105, 198, 0.2);
+  font-weight: 800;
 }
 
 /* Hero principal */
