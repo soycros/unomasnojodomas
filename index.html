@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>UNA MAS, NO JODO MAS — Estreno oficial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Estreno oficial de la canción 'UNA MAS, NO JODO MAS'. Mirá el video y compartilo." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="UNA MAS, NO JODO MAS — Estreno oficial" />
+  <meta property="og:description" content="Mirá el estreno en YouTube y compartilo con tu gente." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/cover.jpg" />
+  <meta property="og:url" content="https://www.youtube.com/@crissacio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UNA MAS, NO JODO MAS — Estreno oficial" />
+  <meta name="twitter:description" content="Mirá el estreno en YouTube y compartilo con tu gente." />
+  <meta name="twitter:image" content="assets/cover.jpg" />
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <!-- HEADER CON TÍTULO -->
+  <header class="site-header">
+    <div class="brand centered-title">
+      <h1>UNA MAS, NO JODO MAS</h1>
+    </div>
+  </header>
+
+  <main class="hero">
+    <!-- VIDEO PRINCIPAL COMO ESTRENO -->
+    <section id="video" class="video-section">
+      <div class="video-frame glass">
+        <iframe
+          width="100%" height="100%"
+          src="https://www.youtube.com/embed/yXFZcZ-mbHY?enablejsapi=1&modestbranding=1&rel=0"
+          title="Estreno programado: UNA MAS, NO JODO MAS"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- PORTADA + SUBTÍTULO -->
+    <section class="card glass">
+      <img class="cover" src="assets/cover.png" alt="Portada de UNA MAS, NO JODO MAS" />
+      <p class="subtitle">
+        FELIZ 2026 PARA TODOS. MI ÚLTIMO REGALO PARA ESTAS FIESTAS.<br>
+        973bb8ded61974db33b464440f368b57b39efd83896f0919f8ec7f023f142f09
+      </p>
+    </section>
+
+    <!-- COMPARTIR -->
+    <section class="share glass">
+      <h2>Compartilo</h2>
+      <div class="share-buttons">
+        <a class="btn btn-ghost" id="shareTwitter" href="#" target="_blank" rel="noopener">Twitter/X</a>
+        <a class="btn btn-ghost" id="shareWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" id="shareFacebook" href="#" target="_blank" rel="noopener">Facebook</a>
+        <button class="btn btn-ghost" id="shareNative">Compartir</button>
+      </div>
+    </section>
+
+    <!-- SOBRE EL TEMA -->
+    <section id="sobre" class="about glass">
+      <h2>Sobre los temas</h2>
+      <p>
+        Yo siempre creí en la idea de que las canciones se pueden armar con un solo objetivo: conectar con
+        otras personas por medio de emociones que recibimos en la música. Como si fuera una forma de trasladar un sentimiento
+        a través de ondas sonoras. Amo la música, es terapéutico. Y este tema en particular lo hice con la intención de
+        transmitir esa sensación de querer estar en paz con uno mismo y con el mundo. Dejar de joder y simplemente vivir.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 — UNA MAS, NO JODO MAS</small>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
