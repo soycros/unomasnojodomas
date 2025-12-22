@@ -37,7 +37,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Fondo de estrellas (canvas) detrás de todo */
+/* Fondo de estrellas */
 #stars {
   position: fixed;
   inset: 0;
@@ -49,35 +49,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 10px;
+  padding: clamp(12px, 3vw, 20px) 10px;
   background: linear-gradient(to bottom, rgba(5,8,15,0.7), rgba(5,8,15,0.25));
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(6px);
 }
 
-/* Título centrado y grande */
+/* Título */
 .centered-title h1 {
   font-family: var(--font-display);
-  font-size: clamp(32px, 6vw, 50px); /* más grande que antes */ 
-  line-height: 0.9; /* más bajo de altura */ 
-  letter-spacing: 4px; /* estirado entre letras */ 
-  transform: scaleX(1.2); /* estirado horizontal */ 
+  font-size: clamp(24px, 8vw, 72px);
+  line-height: 1;
+  letter-spacing: 2px;
   margin: 0;
-  background: #e6faff;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #fff;
   text-align: center;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6), /* halo blanco */ 0 0 12px rgba(184, 75, 255, 0.25), /* magenta tenue */ 0 0 18px rgba(255, 105, 198, 0.2);
+  text-shadow: 0 0 6px rgba(255,255,255,0.6),
+               0 0 12px rgba(184,75,255,0.25),
+               0 0 18px rgba(255,105,198,0.2);
   font-weight: 800;
 }
 
-/* Hero principal */
+@media (min-width: 768px) {
+  .centered-title h1 {
+    transform: scaleX(1.15);
+    letter-spacing: 4px;
+  }
+}
+
+/* Hero */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 80px;
+  padding: clamp(20px, 6vw, 80px) 20px;
   gap: 30px;
 }
 
@@ -89,7 +94,8 @@ body {
 }
 
 .video-frame {
-  width: min(980px, 92vw);
+  width: 100%;
+  max-width: 980px;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   overflow: hidden;
@@ -106,35 +112,11 @@ body {
   height: 100%;
 }
 
-/* Overlay para modo cine */
-.cinema-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(8px);
-  z-index: 1;
-  display: none;
-}
-
-/* Estado expandido tipo cine */
-.video-frame.cinema-mode {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  height: 70vh;
-  max-width: 1200px;
-  max-height: 80vh;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(0,0,0,0.8);
-  z-index: 3;
-}
-
-/* Card con portada */
+/* Card */
 .card.glass {
-  width: min(980px, 92vw);
-  padding: 26px;
+  width: 100%;
+  max-width: 980px;
+  padding: clamp(16px, 4vw, 26px);
   border-radius: var(--radius);
   background: linear-gradient(150deg, var(--glass), rgba(10, 16, 28, 0.35));
   box-shadow: var(--shadow);
@@ -144,6 +126,7 @@ body {
 
 .cover {
   width: 100%;
+  height: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   border-radius: calc(var(--radius) - 6px);
@@ -154,13 +137,14 @@ body {
 .subtitle {
   margin: 18px 0 0;
   color: var(--muted);
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: clamp(14px, 3vw, 20px);
 }
 
 /* Share */
 .share {
-  width: min(980px, 92vw);
-  padding: 18px;
+  width: 100%;
+  max-width: 980px;
+  padding: clamp(12px, 3vw, 18px);
   border-radius: var(--radius);
   background: linear-gradient(150deg, rgba(16, 24, 40, 0.5), rgba(10, 18, 30, 0.35));
   border: 1px solid var(--border);
@@ -179,8 +163,9 @@ body {
   justify-content: center;
 }
 
-/* Botones */
 .btn {
+  flex: 1 1 auto;
+  min-width: 120px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -201,8 +186,9 @@ body {
 
 /* About */
 .about {
-  width: min(980px, 92vw);
-  padding: 24px;
+  width: 100%;
+  max-width: 980px;
+  padding: clamp(16px, 4vw, 24px);
   border-radius: var(--radius);
   background: linear-gradient(150deg, var(--glass), rgba(10, 16, 28, 0.35));
   border: 1px solid var(--border);
@@ -217,15 +203,16 @@ body {
 
 /* Footer */
 .site-footer {
-  padding: 24px;
+  padding: clamp(16px, 4vw, 24px);
   text-align: center;
   color: var(--muted);
   border-top: 1px solid var(--border);
   background: linear-gradient(to top, rgba(5,8,15,0.7), rgba(5,8,15,0.25));
 }
 
-/* Responsivo pequeño */
+/* Responsivo */
 @media (max-width: 520px) {
   .subtitle { font-size: 14px; }
   .share-buttons { flex-direction: column; }
+  .btn { width: 100%; }
 }
