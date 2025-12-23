@@ -1,5 +1,5 @@
 :root {
-  /* Paleta cósmica inspirada en la portada */
+  /* Paleta cósmica */
   --bg: #07080d;
   --ink: #e6e9f2;
   --muted: #b6bdd1;
@@ -25,10 +25,15 @@
   --font-display: "Unbounded", "Inter", sans-serif;
 }
 
+/* =========================
+   Reset + base
+========================= */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 html,
@@ -47,10 +52,31 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
+
+  /* CENTRADO GLOBAL DE TEXTO */
+  text-align: center;
 }
 
 /* =========================
-   Fondo de estrellas
+   TODOS LOS TEXTOS CENTRADOS
+========================= */
+h1, h2, h3, h4, h5, h6,
+p, span, small,
+a, button, label,
+li, figcaption {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mejora óptica títulos */
+h1, h2 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* =========================
+   Fondo estrellas
 ========================= */
 #stars {
   position: fixed;
@@ -76,7 +102,7 @@ body {
 }
 
 /* =========================
-   TÍTULO RESPONSIVE ANTI-DESBORDE
+   TÍTULO PRINCIPAL
 ========================= */
 .centered-title {
   width: 100%;
@@ -94,27 +120,23 @@ body {
   padding-inline: 4vw;
 
   max-width: 100%;
-  text-align: center;
-
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: clip;
 
   letter-spacing: clamp(0.5px, 0.4vw, 4px);
   font-weight: 800;
 
   color: #fff;
   text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.6),
-    0 0 12px rgba(184, 75, 255, 0.25),
-    0 0 18px rgba(255, 105, 198, 0.2);
+    0 0 6px rgba(255,255,255,0.6),
+    0 0 12px rgba(184,75,255,0.25),
+    0 0 18px rgba(255,105,198,0.2);
 }
 
-/* Permite salto de línea solo en móviles chicos */
+/* Permite salto de línea en móviles chicos */
 @media (max-width: 420px) {
   .centered-title h1 {
     white-space: normal;
-    text-wrap: balance;
   }
 }
 
@@ -151,9 +173,6 @@ body {
   );
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  transition: all 0.4s ease;
-  position: relative;
-  z-index: 2;
 }
 
 .video-frame iframe {
@@ -177,7 +196,6 @@ body {
   );
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
-  text-align: center;
 }
 
 .cover {
@@ -190,7 +208,7 @@ body {
 }
 
 .subtitle {
-  margin: 18px 0 0;
+  margin-top: 18px;
   color: var(--muted);
   font-size: clamp(12px, 3vw, 20px);
 }
@@ -209,12 +227,6 @@ body {
     rgba(10, 18, 30, 0.35)
   );
   border: 1px solid var(--border);
-  text-align: center;
-}
-
-.share h2 {
-  margin: 0 0 12px;
-  font-family: var(--font-display);
 }
 
 .share-buttons {
@@ -224,6 +236,18 @@ body {
   justify-content: center;
 }
 
+/* =========================
+   Botones
+========================= */
+.btn,
+a,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .btn {
   flex: 1 1 auto;
   min-width: 120px;
@@ -231,9 +255,9 @@ body {
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid var(--border);
-  background: transparent;
   color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--border);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -256,12 +280,6 @@ body {
   );
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  text-align: center;
-}
-
-.about h2 {
-  font-family: var(--font-display);
-  margin-bottom: 12px;
 }
 
 /* =========================
@@ -269,7 +287,6 @@ body {
 ========================= */
 .site-footer {
   padding: clamp(16px, 4vw, 24px);
-  text-align: center;
   color: var(--muted);
   border-top: 1px solid var(--border);
   background: linear-gradient(
@@ -280,7 +297,7 @@ body {
 }
 
 /* =========================
-   Responsive ajustes
+   Responsive
 ========================= */
 @media (max-width: 520px) {
   .share-buttons {
