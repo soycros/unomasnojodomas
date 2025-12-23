@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
+
   <title>UNA MAS, NO JODO MAS — Estreno oficial</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Estreno oficial de la canción 'UNA MAS, NO JODO MAS'. Mirá el video y compartilo." />
 
@@ -10,82 +12,103 @@
   <meta property="og:title" content="UNA MAS, NO JODO MAS — Estreno oficial" />
   <meta property="og:description" content="Mirá el estreno en YouTube y compartilo con tu gente." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/cover.jpg" />
   <meta property="og:url" content="https://www.youtube.com/@crissacio" />
+  <meta property="og:image" content="https://tudominio.com/assets/cover.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="UNA MAS, NO JODO MAS — Estreno oficial" />
   <meta name="twitter:description" content="Mirá el estreno en YouTube y compartilo con tu gente." />
-  <meta name="twitter:image" content="assets/cover.jpg" />
+  <meta name="twitter:image" content="https://tudominio.com/assets/cover.jpg" />
 
+  <!-- Favicon -->
   <link rel="icon" href="assets/favicon.PNG" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles/main.css" />
 </head>
-<body>
-  <canvas id="stars"></canvas>
 
-  <!-- HEADER CON TÍTULO -->
+<body>
+  <!-- Fondo animado -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="brand centered-title">
       <h1>UNA MAS, NO JODO MAS</h1>
     </div>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="hero">
-    <!-- VIDEO PRINCIPAL COMO ESTRENO -->
-    <section id="video" class="video-section">
+
+    <!-- VIDEO DE ESTRENO -->
+    <section id="video" class="video-section" aria-label="Video estreno">
       <div class="video-frame glass">
         <iframe
-  width="100%"
-  height="100%"
-  src="https://www.youtube.com/embed/yFfdGLFhQe8"
-  title="Estreno oficial: UNA MAS, NO JODO MAS"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
+          loading="lazy"
+          width="100%"
+          height="100%"
+          src="https://www.youtube-nocookie.com/embed/yFfdGLFhQe8"
+          title="Estreno oficial: UNA MAS, NO JODO MAS"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
-    <!-- PORTADA + SUBTÍTULO -->
-    <section class="card glass">
-      <img class="cover" src="assets/cover.png" alt="Portada de UNA MAS, NO JODO MAS" />
+
+    <!-- PORTADA -->
+    <section class="card glass" aria-label="Portada del sencillo">
+      <img
+        class="cover"
+        src="assets/cover.png"
+        alt="Portada del sencillo UNA MAS, NO JODO MAS"
+        loading="lazy"
+      />
       <p class="subtitle">
-        FELIZ 2026 PARA TODOS. MI ÚLTIMO REGALO PARA ESTAS FIESTAS.<br>
+        FELIZ 2026 PARA TODOS. MI ÚLTIMO REGALO PARA ESTAS FIESTAS.<br />
         973bb8ded61974db33b464440f368b57b39efd83896f0919f8ec7f023f142f09
       </p>
     </section>
 
     <!-- COMPARTIR -->
-    <section class="share glass">
+    <section class="share glass" aria-label="Compartir estreno">
       <h2>Compartilo</h2>
       <div class="share-buttons">
-        <a class="btn btn-ghost" id="shareTwitter" href="#" target="_blank" rel="noopener">Twitter/X</a>
-        <a class="btn btn-ghost" id="shareWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn-ghost" id="shareFacebook" href="#" target="_blank" rel="noopener">Facebook</a>
-        <button class="btn btn-ghost" id="shareNative">Compartir</button>
+        <a class="btn btn-ghost" id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+        <a class="btn btn-ghost" id="shareWhatsApp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-ghost" id="shareFacebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <button class="btn btn-ghost" id="shareNative" type="button">Compartir</button>
       </div>
     </section>
 
     <!-- SOBRE EL TEMA -->
-    <section id="sobre" class="about glass">
-      <h2>Sobre los temas</h2>
+    <section id="sobre" class="about glass" aria-label="Sobre la canción">
+      <h2>Sobre el tema</h2>
       <p>
-        Yo siempre creí en la idea de que las canciones se pueden armar con un solo objetivo: conectar con
-        otras personas por medio de emociones que recibimos en la música. Como si fuera una forma de trasladar un sentimiento
-        a través de ondas sonoras. Amo la música, es terapéutico. Y este tema en particular lo hice con la intención de
-        transmitir esa sensación de querer estar en paz con uno mismo y con el mundo. Dejar de joder y simplemente vivir.
+        Yo siempre creí en la idea de que las canciones se pueden armar con un solo objetivo:
+        conectar con otras personas por medio de emociones que recibimos en la música.
+        Como si fuera una forma de trasladar un sentimiento a través de ondas sonoras.
+        Amo la música, es terapéutica. Y este tema en particular lo hice con la intención de
+        transmitir esa sensación de querer estar en paz con uno mismo y con el mundo.
+        Dejar de joder y simplemente vivir.
       </p>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <small>© 2025 — UNA MAS, NO JODO MAS</small>
+    <small>© 2026 — UNA MAS, NO JODO MAS</small>
   </footer>
 
+  <!-- Scripts -->
   <script src="scripts/main.js"></script>
 </body>
 </html>
